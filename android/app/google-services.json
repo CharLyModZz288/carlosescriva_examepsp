@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "510363129448",
+    "project_id": "examenpspcarlosescriva",
+    "storage_bucket": "examenpspcarlosescriva.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:510363129448:android:6a9ed3838c765b02bb4ddd",
+        "android_client_info": {
+          "package_name": "com.example.carlosescriva_examepsp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkyzlpDldyliRxRK2z6XzXfBsAmZOTDsM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
