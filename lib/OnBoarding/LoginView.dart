@@ -7,6 +7,8 @@ import 'package:carlosescriva_examepsp/Custom/BottomMenu.dart';
 import 'package:carlosescriva_examepsp/OnBoarding/RegisterView.dart';
 
 import '../Custom/KTTextField.dart';
+import '../FirestoreObjects/FbUsuario.dart';
+import '../Singletone/DataHolder.dart';
 
 
 class LoginView extends StatelessWidget{
