@@ -1,3 +1,4 @@
+import 'package:carlosescriva_examepsp/main/MapaView.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -35,6 +36,7 @@ class Examen extends StatelessWidget{
           '/loginview': (context) => LoginView(),
           '/registerview': (context) => RegisterView(),
           '/homeview': (context) => HomeView(),
+          '/mapaview': (context) => MapaView(),
           '/splashview': (context) => SplashView(),
           '/perfilview': (context) => PerfilView(),
           '/postview': (context) => PostView(),
