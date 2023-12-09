@@ -45,7 +45,7 @@ class _PostViewState extends State<PostView> {
         ],
 
       )
-      :
+          :
       CircularProgressIndicator(),
     );
 

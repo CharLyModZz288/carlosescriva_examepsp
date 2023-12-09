@@ -53,7 +53,7 @@ class RegisterView extends StatelessWidget{
     _context=context;
 
     Column columna = Column(children: [
-      Text("Bienvenido a Kyty Register",style: TextStyle(fontSize: 25)),
+      Text("Bienvenido al examen de Carlos Escriva Segovia",style: TextStyle(fontSize: 25)),
 
       Padding(padding: EdgeInsets.symmetric(horizontal: 60, vertical: 16),
         child: KTTextField(tecController: tecUsername,

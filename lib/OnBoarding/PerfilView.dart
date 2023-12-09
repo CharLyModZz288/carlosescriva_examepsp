@@ -18,8 +18,7 @@ class PerfilView extends StatelessWidget{
   void onClickAceptar() async{
 
     FbUsuario usuario = new FbUsuario(nombre: tecNombre.text,
-        edad: int.parse(tecEdad.text), altura: 0,colorPelo: "",
-        geoloc: GeoPoint(0,0));
+        edad: int.parse(tecEdad.text), altura: 0,colorPelo: "");
 
 
     //Crear documento con ID NUESTRO (o proporsionado por nosotros)

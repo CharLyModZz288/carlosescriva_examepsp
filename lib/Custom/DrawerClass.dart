@@ -21,26 +21,20 @@ class DrawerClass extends StatelessWidget{
             ),
             child: Text(
                 style: TextStyle(color: Colors.white),
-                'Header'
+                'Ajustes'
             ),
           ),
           ListTile(
-            leading: Image.asset('resources/logo_kyty.png'),
+            leading:Image.asset("resources/logout.jpeg",width: 50, height: 50),
             selectedColor: Colors.blue,
             selected: true,
-            title: const Text('Apartado 1'),
+            title: const Text('Logout'),
             onTap: () {
               onItemTap!(0);
 
             },
           ),
-          ListTile(
-            leading: Icon(Icons.accessible_forward_rounded, color: Colors.red),
-            title: const Text('Apartado 2'),
-            onTap: () {
-              onItemTap!(1);
-            },
-          ),
+
         ],
       ),
     );

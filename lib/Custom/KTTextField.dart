@@ -8,8 +8,7 @@ class KTTextField extends StatelessWidget{
   double dPaddingH;
   double dPaddingV;
 
-  KTTextField({Key? key,
-    this.sHint="",
+  KTTextField({Key? key,this.sHint="",
     required this.tecController,
     this.blIsPassword=false,
     this.dPaddingH=60,
@@ -23,7 +22,7 @@ class KTTextField extends StatelessWidget{
 
     return Padding(padding: EdgeInsets.symmetric(horizontal: dPaddingH, vertical: dPaddingV),
       child: Row(children: [
-        Image.asset("resources/logo_kyty2.png",width: 50, height: 50),
+        Image.asset("resources/psp.jpeg",width: 50, height: 50),
         Flexible(
           child: TextFormField(
               controller: tecController,
@@ -33,14 +32,13 @@ class KTTextField extends StatelessWidget{
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 //hintText: sHint,
-                fillColor: Colors.greenAccent,
+                fillColor: Colors.purpleAccent,
                 filled: true,
                 labelText: sHint,
-                suffixIcon:Icon(Icons.check_circle),
+                suffixIcon:Icon(Icons.check_circle_outline_rounded),
                 prefixIcon: Icon(Icons.check_circle),
               )),
         ),
-        //Image.network("https://media.tenor.com/zBc1XhcbTSoAAAAC/nyan-cat-rainbow.gif",width: 80, height:80),
       ],
       ),
     );

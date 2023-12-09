@@ -30,6 +30,7 @@ class FbPost{
       if (titulo != null) "titulo": titulo,
       if (cuerpo != null) "cuerpo": cuerpo,
       if (sUrlImg != null) "sUrlImg": sUrlImg
+
     };
   }
 }

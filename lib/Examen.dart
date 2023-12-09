@@ -1,15 +1,15 @@
-import 'package:carlosescriva_examepsp/Main/MapaView.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-import 'Main/HomeView.dart';
-import 'Main/PostCreateView.dart';
-import 'Main/PostView.dart';
+
 import 'OnBoarding/LoginView.dart';
 import 'OnBoarding/PerfilView.dart';
 import 'OnBoarding/RegisterView.dart';
 import 'Splash/SplashView.dart';
+import 'main/HomeView.dart';
+import 'main/PostCreateView.dart';
+import 'main/PostView.dart';
 
 class Examen extends StatelessWidget{
   @override
@@ -40,7 +40,7 @@ class Examen extends StatelessWidget{
           '/postview': (context) => PostView(),
           '/postcreateview': (context) => PostCreateView(),
         },
-        initialRoute: '/loginview',
+        initialRoute: '/splashview',
       );
     }
     return materialApp;

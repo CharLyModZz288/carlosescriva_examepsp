@@ -56,7 +56,7 @@ class _PostCreateViewState extends State<PostCreateView> {
         "posts/"+FirebaseAuth.instance.currentUser!.uid+"/imgs/"+
             DateTime.now().millisecondsSinceEpoch.toString()+".jpg";
     print("RUTA DONDE VA A GUARDARSE LA IMAGEN: "+rutaEnNube);
-    
+
     final rutaAFicheroEnNube = storageRef.child(rutaEnNube);
     // Create the file metadata
     final metadata = SettableMetadata(contentType: "image/jpeg");
@@ -111,7 +111,13 @@ class _PostCreateViewState extends State<PostCreateView> {
                 TextButton(onPressed: onCameraClicked, child: Text("Camara")),
               ],
             ),
-            TextButton(onPressed: subirPost, child: Text("Postear"))
+            TextButton(onPressed: () {
+              subirPost();
+
+
+              /**/
+
+            }, child: Text("Postear"))
           ],
 
         ),

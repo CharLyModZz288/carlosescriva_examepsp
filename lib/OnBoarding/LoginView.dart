@@ -1,15 +1,10 @@
-import 'dart:io';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:carlosescriva_examepsp/Custom/BottomMenu.dart';
 import 'package:carlosescriva_examepsp/OnBoarding/RegisterView.dart';
 
 import '../Custom/KTTextField.dart';
 import '../FirestoreObjects/FbUsuario.dart';
-import '../Singletone/DataHolder.dart';
-
 
 class LoginView extends StatelessWidget{
   FirebaseFirestore db = FirebaseFirestore.instance;
@@ -30,7 +25,16 @@ class LoginView extends StatelessWidget{
       );
       //print(">>>>>>>>>>>>>>>>>>>> ME HE LOGEADO!!!!!");
 
-      FbUsuario? usuario= await DataHolder().loadFbUsuario();
+      String uid=FirebaseAuth.instance.currentUser!.uid;
+
+      DocumentReference<FbUsuario> ref=db.collection("Usuarios")
+          .doc(uid)
+          .withConverter(fromFirestore: FbUsuario.fromFirestore,
+        toFirestore: (FbUsuario usuario, _) => usuario.toFirestore(),);
+
+
+      DocumentSnapshot<FbUsuario> docSnap=await ref.get();
+      FbUsuario usuario=docSnap.data()!;
 
       if(usuario!=null){
         print("EL NOMBRE DEL USUARIO LOGEADO ES: "+usuario.nombre);
@@ -64,7 +68,7 @@ class LoginView extends StatelessWidget{
 
 
     Column columna = Column(children: [
-      Text("Bienvenido a Kyty Login",style: TextStyle(fontSize: 25)),
+      Text("Bienvenido al examen de Carlos Escriva Segovia",style: TextStyle(fontSize: 25)),
 
       Padding(padding: EdgeInsets.symmetric(horizontal: 60, vertical: 16),
         child: KTTextField(tecController: tecUsername,
@@ -95,18 +99,9 @@ class LoginView extends StatelessWidget{
 
     Scaffold scaf=Scaffold(body: columna,
       //backgroundColor: Colors.deepOrange,
-    appBar: appBar,
-    bottomNavigationBar: BottomMenu(onBotonesClicked: onBottonMenuPressed),
-    );
+    appBar: appBar,);
 
     return scaf;
-  }
-
-  @override
-  void onBottonMenuPressed(int indice) {
-    // TODO: implement onBottonMenuPressed
-    if(indice==0)exit(0);
-    print("---------->>> LOGIN: "+indice.toString());
   }
 
 }
